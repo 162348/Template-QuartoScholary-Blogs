@@ -1,0 +1,80 @@
+project:
+  type: website
+  output-dir: docs
+  # render: # see https://quarto.org/docs/projects/quarto-projects.html#render-targets
+  #   - "/posts/*"
+  #   - "/static/*"
+  #   - "*.qmd"
+
+website:
+  title: "My Website"
+  image: profile.jpg
+  favicon: profile.jpg
+  site-url: https://162348.github.io/  # Change This
+  description: "数学で世界を渡り歩こう"
+  navbar:
+    right:
+      - text: "カテゴリ"
+        file: ./static/AllCategories.qmd
+    #   - text: "Sessions"
+    #     file: ./static/Sessions.qmd
+    #   - text: "Slides"
+    #     file: ./static/Slides.qmd
+    #   - text: "自己紹介"
+    #     file: ./static/Japanese.qmd
+    tools:
+      - icon: github
+        href: https://github.com/162348/162348.github.io/  # Change This
+      # - icon: envelope
+      #   href: mailto:shiba.hirofumi@ism.ac.jp
+      # - icon: twitter
+      #   href: https://twitter.com/ano2math5
+  # back-to-top-navigation: true
+  page-navigation: true
+  # page-footer: 
+  #   # border: true
+  #   left: 
+  #     - text: "Hirofumi Shiba"
+  #       href: https://162348.github.io/
+  #   right:
+  #     - icon: github
+  #       href: https://github.com/162348/162348.github.io/
+  #     - icon: twitter
+  #       href: https://twitter.com/ano2math5
+  #     - icon: envelope
+  #       href: mailto:shiba.hirofumi@ism.ac.jp
+  #     - icon: rss
+  #       href: blog.xml
+  #   background: "#80c4ac"
+  # repo-url: https://github.com/162348/162348.github.io/
+  # repo-actions: [edit, issue]
+  search:
+    keyboard-shortcut: ["?", "H"]
+  open-graph: true
+  twitter-card: true
+
+format:
+  html:
+    theme: united
+    # theme: 
+    # light: minty
+    # dark: cyborg
+    css: styles.css
+    toc: true
+    number-sections: true
+    highlight-style: ayu
+    code-block-bg: true
+    code-block-border-left: "#7CC4AC"
+    code-overflow: scroll
+    code-fold: true
+    code-annotations: select
+    # license: "CC BY-NC-ND"
+    fig-width: 6
+    fig-height: 4
+    toc-title: "目次"
+    abstract-title: "概要"
+
+date-format: "M/DD/YYYY"
+
+execute:
+  freeze: true

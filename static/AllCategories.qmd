@@ -1,0 +1,58 @@
+---
+title: "Categories"
+description: "カテゴリ別記事一覧"
+title-block-banner: true
+page-layout: full
+number-sections: false
+comments: false
+listing:
+    -   id: 憲法-listing
+        type: grid
+        sort: "date desc"
+        contents:
+            - "../posts/**"
+        include:
+            categories: [憲法]
+        date-format: iso
+        fields: [title,image,date,subtitle,categories]
+        page-size: 3
+        filter-ui: true
+        sort-ui: true
+    -   id: 行政法-listing
+        type: grid
+        sort: "date desc"
+        contents:
+            - "../posts/**"
+        include:
+            categories: [行政法]
+        date-format: iso
+        fields: [title,image,date,subtitle,categories]
+        page-size: 3
+        filter-ui: true
+        sort-ui: true
+    -   id: 民法-listing
+        type: grid
+        sort: "date desc"
+        contents:
+            - "../posts/**"
+        include:
+            categories: [民法]
+        date-format: iso
+        fields: [title,image,date,subtitle,categories]
+        page-size: 3
+        filter-ui: true
+        sort-ui: true
+---
+
+
+# 公法
+
+### [憲法](https://162348.github.io/notes.html#category=憲法)
+
+::: {#憲法-listing}
+:::
+
+### [行政法](https://162348.github.io/notes.html#category=行政法)
+
+::: {#行政法-listing}
+:::

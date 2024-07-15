@@ -1,0 +1,18 @@
+---
+title: Page Not Found 404
+page-layout: full
+toc: false
+comments: false
+number-sections: false
+format:
+  html:
+    include-in-header:
+      text: | 
+        <style>
+            h1 {
+                font-size: 40px; /* 見出し1のフォントサイズを40pxに設定 */
+            }
+        </style>
+---
+
+# [Back to the top](index.qmd)
