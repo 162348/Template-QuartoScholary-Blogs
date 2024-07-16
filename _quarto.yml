@@ -1,10 +1,10 @@
 project:
   type: website
   output-dir: docs
-  # render: # see https://quarto.org/docs/projects/quarto-projects.html#render-targets
-  #   - "/posts/*"
-  #   - "/static/*"
-  #   - "*.qmd"
+  render: # see https://quarto.org/docs/projects/quarto-projects.html#render-targets
+    - "/posts/*"
+    - "/static/*"
+    - "*.qmd"
 
 website:
   title: "My Website"
