@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.552">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="司馬博文">
+<meta name="dcterms.date" content="2023-11-04">
+
+<title>My Website - Quarto はじめて良かったこと</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../profile.jpg" rel="icon" type="image/jpeg">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "?",
+    "H"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../assets/styles.css">
+<meta property="og:title" content="My Website - Quarto はじめて良かったこと">
+<meta property="og:description" content="Quarto は TeX のような使用感で，数式とコードが併存する文章を書き，１つのソースファイルから PDF, HTML, Word, Reveal.js, PowerPoint などの多様な形式に出力できる次世代の執筆環境である．TeX, RStudio, Jupyter Notebook のいずれかに慣れている人であれば，極めて手軽に Quarto を使うことができる．筆者が用意した テンプレート から簡単に始めることができる．公式の ギャラリー も参照．">
+<meta property="og:image" content="https://162348.github.io/posts/2025/Lifestyle/fig-parametric.svg">
+<meta property="og:site_name" content="My Website">
+<meta name="twitter:title" content="My Website - Quarto はじめて良かったこと">
+<meta name="twitter:description" content="Quarto は TeX のような使用感で，数式とコードが併存する文章を書き，１つのソースファイルから PDF, HTML, Word, Reveal.js, PowerPoint などの多様な形式に出力できる次世代の執筆環境である．TeX, RStudio, Jupyter Notebook のいずれかに慣れている人であれば，極めて手軽に Quarto を使うことができる．筆者が用意した テンプレート から簡単に始めることができる．公式の ギャラリー も参照．">
+<meta name="twitter:image" content="https://162348.github.io/posts/2025/Lifestyle/fig-parametric.svg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">My Website</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../static/AllCategories.html"> 
+<span class="menu-text">カテゴリ</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/162348/162348.github.io/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目次</h2>
+   
+  <ul>
+  <li><a href="#使い方の概要" id="toc-使い方の概要" class="nav-link active" data-scroll-target="#使い方の概要"><span class="header-section-number">1</span> 使い方の概要</a>
+  <ul class="collapse">
+  <li><a href="#はじめに" id="toc-はじめに" class="nav-link" data-scroll-target="#はじめに"><span class="header-section-number">1.1</span> はじめに</a></li>
+  <li><a href="#美点" id="toc-美点" class="nav-link" data-scroll-target="#美点"><span class="header-section-number">1.2</span> 美点</a></li>
+  <li><a href="#yaml-header" id="toc-yaml-header" class="nav-link" data-scroll-target="#yaml-header"><span class="header-section-number">1.3</span> YAML Header</a></li>
+  <li><a href="#本文の書き方" id="toc-本文の書き方" class="nav-link" data-scroll-target="#本文の書き方"><span class="header-section-number">1.4</span> 本文の書き方</a></li>
+  <li><a href="#カーネルの選択" id="toc-カーネルの選択" class="nav-link" data-scroll-target="#カーネルの選択"><span class="header-section-number">1.5</span> カーネルの選択</a></li>
+  </ul></li>
+  <li><a href="#website-の作り方" id="toc-website-の作り方" class="nav-link" data-scroll-target="#website-の作り方"><span class="header-section-number">2</span> Website の作り方</a>
+  <ul class="collapse">
+  <li><a href="#source-branchをmainと別ける" id="toc-source-branchをmainと別ける" class="nav-link" data-scroll-target="#source-branchをmainと別ける"><span class="header-section-number">2.1</span> Source Branchを<code>main</code>と別ける</a></li>
+  <li><a href="#publishコマンドによるサイトの公開" id="toc-publishコマンドによるサイトの公開" class="nav-link" data-scroll-target="#publishコマンドによるサイトの公開"><span class="header-section-number">2.2</span> <code>Publish</code>コマンドによるサイトの公開</a></li>
+  <li><a href="#github-action-の使用" id="toc-github-action-の使用" class="nav-link" data-scroll-target="#github-action-の使用"><span class="header-section-number">2.3</span> GitHub Action の使用</a></li>
+  </ul></li>
+  <li><a href="#pdf-の作り方" id="toc-pdf-の作り方" class="nav-link" data-scroll-target="#pdf-の作り方"><span class="header-section-number">3</span> PDF の作り方</a>
+  <ul class="collapse">
+  <li><a href="#lualatex-を使う方法" id="toc-lualatex-を使う方法" class="nav-link" data-scroll-target="#lualatex-を使う方法"><span class="header-section-number">3.1</span> LuaLaTeX を使う方法</a></li>
+  <li><a href="#typst-を用いる方法" id="toc-typst-を用いる方法" class="nav-link" data-scroll-target="#typst-を用いる方法"><span class="header-section-number">3.2</span> Typst を用いる方法</a></li>
+  </ul></li>
+  <li><a href="#スライドの作り方" id="toc-スライドの作り方" class="nav-link" data-scroll-target="#スライドの作り方"><span class="header-section-number">4</span> スライドの作り方</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="QuartoBasics_slide.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="QuartoBasics.pptx"><i class="bi bi-file-slides"></i>Powerpoint</a></li><li><a href="QuartoBasics_typst.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Quarto はじめて良かったこと</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Lifestyle</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>司馬博文 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">11/04/2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">7/07/2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">概要</div>
+    Quarto は TeX のような使用感で，数式とコードが併存する文章を書き，１つのソースファイルから PDF, HTML, Word, Reveal.js, PowerPoint などの多様な形式に出力できる次世代の執筆環境である．TeX, RStudio, Jupyter Notebook のいずれかに慣れている人であれば，極めて手軽に Quarto を使うことができる．筆者が用意した <a href="https://github.com/162348/Template-QuartoScholary-Blogs">テンプレート</a> から簡単に始めることができる．公式の <a href="https://quarto.org/docs/gallery/">ギャラリー</a> も参照．
+  </div>
+</div>
+
+
+</header>
+
+
+<div class="hidden">
+<p>A Blog Entry on Bayesian Computation by an Applied Mathematician</p>
+<p>$$</p>
+<p>$$</p>
+</div>
+<section id="使い方の概要" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="使い方の概要"><span class="header-section-number">1</span> 使い方の概要</h2>
+<section id="はじめに" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="はじめに"><span class="header-section-number">1.1</span> はじめに</h3>
+<p>本サイトは Quarto と，GitHub Actions によってホスティングされている．</p>
+<div class="callout callout-style-simple callout-important no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<ul>
+<li><a href="../../2024/Process/Levy.qmd">Lévy 過程を見てみよう</a> など，コードと数式を併せて書いている Jupyter Notebook のようなページ</li>
+<li><a href="../../../static/CV/cv.qmd">CV</a> など，HTML と PDF の両方で見れるページ</li>
+<li><a href="../../2024/Slides/ZigZagSampler.qmd">Zig-Zag サンプラー</a> など，HTML とスライド (reveal.js) の両方で見れるページ</li>
+<li>本ページなど，HTML とスライド (pptx)，typst PDF と LaTeX PDF と reveal.js のさまざまで見れるページ</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important no-icon callout-titled" title="注">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+注
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>スマホでは別フォーマットのページのリンクは表示されないようである．</p>
+</div>
+</div>
+</div>
+<div id="cell-fig-parametric" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Plots</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="fu">plot</span>(sin, </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>     <span class="fu">x-&gt;sin</span>(<span class="fl">2</span>x), </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>     <span class="fl">0</span>, </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>     <span class="fl">2</span>π, </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>     leg<span class="op">=</span><span class="cn">false</span>, </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>     fill<span class="op">=</span>(<span class="fl">0</span>,<span class="op">:</span>lavender))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="fig-parametric" class="cell-output cell-output-display quarto-figure quarto-figure-center quarto-float anchored" data-execution_count="2">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-parametric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<!--?xml version="1.0" encoding="utf-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="576" height="384" viewbox="0 0 2304 1536">
+<defs>
+  <clippath id="clip940">
+    <rect x="0" y="0" width="2304" height="1536"></rect>
+  </clippath>
+</defs>
+<path clip-path="url(#clip940)" d="M0 1536 L2304 1536 L2304 8.52651e-14 L0 8.52651e-14  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"></path>
+<defs>
+  <clippath id="clip941">
+    <rect x="460" y="0" width="1614" height="1536"></rect>
+  </clippath>
+</defs>
+<path clip-path="url(#clip940)" d="M192.976 1423.09 L2256.76 1423.09 L2256.76 47.2441 L192.976 47.2441  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"></path>
+<defs>
+  <clippath id="clip942">
+    <rect x="192" y="47" width="2065" height="1377"></rect>
+  </clippath>
+</defs>
+<polyline clip-path="url(#clip942)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="251.355,1423.09 251.355,47.2441 "></polyline>
+<polyline clip-path="url(#clip942)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="738.11,1423.09 738.11,47.2441 "></polyline>
+<polyline clip-path="url(#clip942)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1224.87,1423.09 1224.87,47.2441 "></polyline>
+<polyline clip-path="url(#clip942)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="1711.62,1423.09 1711.62,47.2441 "></polyline>
+<polyline clip-path="url(#clip942)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="2198.38,1423.09 2198.38,47.2441 "></polyline>
+<polyline clip-path="url(#clip942)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="192.976,1384.17 2256.76,1384.17 "></polyline>
+<polyline clip-path="url(#clip942)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="192.976,1059.67 2256.76,1059.67 "></polyline>
+<polyline clip-path="url(#clip942)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="192.976,735.166 2256.76,735.166 "></polyline>
+<polyline clip-path="url(#clip942)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="192.976,410.664 2256.76,410.664 "></polyline>
+<polyline clip-path="url(#clip942)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="192.976,86.1629 2256.76,86.1629 "></polyline>
+<polyline clip-path="url(#clip940)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="192.976,1423.09 2256.76,1423.09 "></polyline>
+<polyline clip-path="url(#clip940)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="251.355,1423.09 251.355,1404.19 "></polyline>
+<polyline clip-path="url(#clip940)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="738.11,1423.09 738.11,1404.19 "></polyline>
+<polyline clip-path="url(#clip940)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1224.87,1423.09 1224.87,1404.19 "></polyline>
+<polyline clip-path="url(#clip940)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1711.62,1423.09 1711.62,1404.19 "></polyline>
+<polyline clip-path="url(#clip940)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="2198.38,1423.09 2198.38,1404.19 "></polyline>
+<path clip-path="url(#clip940)" d="M197.883 1467.89 L227.558 1467.89 L227.558 1471.83 L197.883 1471.83 L197.883 1467.89 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M238.461 1480.78 L246.1 1480.78 L246.1 1454.42 L237.79 1456.09 L237.79 1451.83 L246.054 1450.16 L250.73 1450.16 L250.73 1480.78 L258.368 1480.78 L258.368 1484.72 L238.461 1484.72 L238.461 1480.78 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M267.813 1478.84 L272.697 1478.84 L272.697 1484.72 L267.813 1484.72 L267.813 1478.84 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M292.882 1453.24 Q289.271 1453.24 287.442 1456.8 Q285.637 1460.35 285.637 1467.47 Q285.637 1474.58 287.442 1478.15 Q289.271 1481.69 292.882 1481.69 Q296.516 1481.69 298.322 1478.15 Q300.151 1474.58 300.151 1467.47 Q300.151 1460.35 298.322 1456.8 Q296.516 1453.24 292.882 1453.24 M292.882 1449.53 Q298.692 1449.53 301.748 1454.14 Q304.826 1458.72 304.826 1467.47 Q304.826 1476.2 301.748 1480.81 Q298.692 1485.39 292.882 1485.39 Q287.072 1485.39 283.993 1480.81 Q280.938 1476.2 280.938 1467.47 Q280.938 1458.72 283.993 1454.14 Q287.072 1449.53 292.882 1449.53 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M685.136 1467.89 L714.812 1467.89 L714.812 1471.83 L685.136 1471.83 L685.136 1467.89 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M734.904 1453.24 Q731.293 1453.24 729.464 1456.8 Q727.659 1460.35 727.659 1467.47 Q727.659 1474.58 729.464 1478.15 Q731.293 1481.69 734.904 1481.69 Q738.538 1481.69 740.344 1478.15 Q742.173 1474.58 742.173 1467.47 Q742.173 1460.35 740.344 1456.8 Q738.538 1453.24 734.904 1453.24 M734.904 1449.53 Q740.714 1449.53 743.77 1454.14 Q746.849 1458.72 746.849 1467.47 Q746.849 1476.2 743.77 1480.81 Q740.714 1485.39 734.904 1485.39 Q729.094 1485.39 726.015 1480.81 Q722.96 1476.2 722.96 1467.47 Q722.96 1458.72 726.015 1454.14 Q729.094 1449.53 734.904 1449.53 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M755.066 1478.84 L759.95 1478.84 L759.95 1484.72 L755.066 1484.72 L755.066 1478.84 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M770.182 1450.16 L788.538 1450.16 L788.538 1454.1 L774.464 1454.1 L774.464 1462.57 Q775.483 1462.22 776.501 1462.06 Q777.52 1461.87 778.538 1461.87 Q784.325 1461.87 787.705 1465.04 Q791.084 1468.22 791.084 1473.63 Q791.084 1479.21 787.612 1482.31 Q784.14 1485.39 777.821 1485.39 Q775.645 1485.39 773.376 1485.02 Q771.131 1484.65 768.724 1483.91 L768.724 1479.21 Q770.807 1480.34 773.029 1480.9 Q775.251 1481.46 777.728 1481.46 Q781.733 1481.46 784.071 1479.35 Q786.409 1477.24 786.409 1473.63 Q786.409 1470.02 784.071 1467.91 Q781.733 1465.81 777.728 1465.81 Q775.853 1465.81 773.978 1466.22 Q772.126 1466.64 770.182 1467.52 L770.182 1450.16 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M1202.25 1453.24 Q1198.64 1453.24 1196.81 1456.8 Q1195.01 1460.35 1195.01 1467.47 Q1195.01 1474.58 1196.81 1478.15 Q1198.64 1481.69 1202.25 1481.69 Q1205.88 1481.69 1207.69 1478.15 Q1209.52 1474.58 1209.52 1467.47 Q1209.52 1460.35 1207.69 1456.8 Q1205.88 1453.24 1202.25 1453.24 M1202.25 1449.53 Q1208.06 1449.53 1211.12 1454.14 Q1214.19 1458.72 1214.19 1467.47 Q1214.19 1476.2 1211.12 1480.81 Q1208.06 1485.39 1202.25 1485.39 Q1196.44 1485.39 1193.36 1480.81 Q1190.31 1476.2 1190.31 1467.47 Q1190.31 1458.72 1193.36 1454.14 Q1196.44 1449.53 1202.25 1449.53 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M1222.41 1478.84 L1227.3 1478.84 L1227.3 1484.72 L1222.41 1484.72 L1222.41 1478.84 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M1247.48 1453.24 Q1243.87 1453.24 1242.04 1456.8 Q1240.24 1460.35 1240.24 1467.47 Q1240.24 1474.58 1242.04 1478.15 Q1243.87 1481.69 1247.48 1481.69 Q1251.12 1481.69 1252.92 1478.15 Q1254.75 1474.58 1254.75 1467.47 Q1254.75 1460.35 1252.92 1456.8 Q1251.12 1453.24 1247.48 1453.24 M1247.48 1449.53 Q1253.29 1449.53 1256.35 1454.14 Q1259.43 1458.72 1259.43 1467.47 Q1259.43 1476.2 1256.35 1480.81 Q1253.29 1485.39 1247.48 1485.39 Q1241.67 1485.39 1238.59 1480.81 Q1235.54 1476.2 1235.54 1467.47 Q1235.54 1458.72 1238.59 1454.14 Q1241.67 1449.53 1247.48 1449.53 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M1689.5 1453.24 Q1685.89 1453.24 1684.06 1456.8 Q1682.26 1460.35 1682.26 1467.47 Q1682.26 1474.58 1684.06 1478.15 Q1685.89 1481.69 1689.5 1481.69 Q1693.14 1481.69 1694.94 1478.15 Q1696.77 1474.58 1696.77 1467.47 Q1696.77 1460.35 1694.94 1456.8 Q1693.14 1453.24 1689.5 1453.24 M1689.5 1449.53 Q1695.31 1449.53 1698.37 1454.14 Q1701.45 1458.72 1701.45 1467.47 Q1701.45 1476.2 1698.37 1480.81 Q1695.31 1485.39 1689.5 1485.39 Q1683.69 1485.39 1680.61 1480.81 Q1677.56 1476.2 1677.56 1467.47 Q1677.56 1458.72 1680.61 1454.14 Q1683.69 1449.53 1689.5 1449.53 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M1709.67 1478.84 L1714.55 1478.84 L1714.55 1484.72 L1709.67 1484.72 L1709.67 1478.84 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M1724.78 1450.16 L1743.14 1450.16 L1743.14 1454.1 L1729.06 1454.1 L1729.06 1462.57 Q1730.08 1462.22 1731.1 1462.06 Q1732.12 1461.87 1733.14 1461.87 Q1738.92 1461.87 1742.3 1465.04 Q1745.68 1468.22 1745.68 1473.63 Q1745.68 1479.21 1742.21 1482.31 Q1738.74 1485.39 1732.42 1485.39 Q1730.24 1485.39 1727.98 1485.02 Q1725.73 1484.65 1723.32 1483.91 L1723.32 1479.21 Q1725.41 1480.34 1727.63 1480.9 Q1729.85 1481.46 1732.33 1481.46 Q1736.33 1481.46 1738.67 1479.35 Q1741.01 1477.24 1741.01 1473.63 Q1741.01 1470.02 1738.67 1467.91 Q1736.33 1465.81 1732.33 1465.81 Q1730.45 1465.81 1728.58 1466.22 Q1726.73 1466.64 1724.78 1467.52 L1724.78 1450.16 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M2165.53 1480.78 L2173.17 1480.78 L2173.17 1454.42 L2164.86 1456.09 L2164.86 1451.83 L2173.12 1450.16 L2177.8 1450.16 L2177.8 1480.78 L2185.44 1480.78 L2185.44 1484.72 L2165.53 1484.72 L2165.53 1480.78 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M2194.88 1478.84 L2199.77 1478.84 L2199.77 1484.72 L2194.88 1484.72 L2194.88 1478.84 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M2219.95 1453.24 Q2216.34 1453.24 2214.51 1456.8 Q2212.71 1460.35 2212.71 1467.47 Q2212.71 1474.58 2214.51 1478.15 Q2216.34 1481.69 2219.95 1481.69 Q2223.59 1481.69 2225.39 1478.15 Q2227.22 1474.58 2227.22 1467.47 Q2227.22 1460.35 2225.39 1456.8 Q2223.59 1453.24 2219.95 1453.24 M2219.95 1449.53 Q2225.76 1449.53 2228.82 1454.14 Q2231.9 1458.72 2231.9 1467.47 Q2231.9 1476.2 2228.82 1480.81 Q2225.76 1485.39 2219.95 1485.39 Q2214.14 1485.39 2211.06 1480.81 Q2208.01 1476.2 2208.01 1467.47 Q2208.01 1458.72 2211.06 1454.14 Q2214.14 1449.53 2219.95 1449.53 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><polyline clip-path="url(#clip940)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="192.976,1423.09 192.976,47.2441 "></polyline>
+<polyline clip-path="url(#clip940)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="192.976,1384.17 211.874,1384.17 "></polyline>
+<polyline clip-path="url(#clip940)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="192.976,1059.67 211.874,1059.67 "></polyline>
+<polyline clip-path="url(#clip940)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="192.976,735.166 211.874,735.166 "></polyline>
+<polyline clip-path="url(#clip940)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="192.976,410.664 211.874,410.664 "></polyline>
+<polyline clip-path="url(#clip940)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="192.976,86.1629 211.874,86.1629 "></polyline>
+<path clip-path="url(#clip940)" d="M51.4721 1384.62 L81.1479 1384.62 L81.1479 1388.56 L51.4721 1388.56 L51.4721 1384.62 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M92.0506 1397.51 L99.6895 1397.51 L99.6895 1371.15 L91.3793 1372.82 L91.3793 1368.56 L99.6432 1366.89 L104.319 1366.89 L104.319 1397.51 L111.958 1397.51 L111.958 1401.45 L92.0506 1401.45 L92.0506 1397.51 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M121.402 1395.57 L126.287 1395.57 L126.287 1401.45 L121.402 1401.45 L121.402 1395.57 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M146.472 1369.97 Q142.861 1369.97 141.032 1373.53 Q139.226 1377.07 139.226 1384.2 Q139.226 1391.31 141.032 1394.88 Q142.861 1398.42 146.472 1398.42 Q150.106 1398.42 151.911 1394.88 Q153.74 1391.31 153.74 1384.2 Q153.74 1377.07 151.911 1373.53 Q150.106 1369.97 146.472 1369.97 M146.472 1366.26 Q152.282 1366.26 155.337 1370.87 Q158.416 1375.45 158.416 1384.2 Q158.416 1392.93 155.337 1397.54 Q152.282 1402.12 146.472 1402.12 Q140.661 1402.12 137.583 1397.54 Q134.527 1392.93 134.527 1384.2 Q134.527 1375.45 137.583 1370.87 Q140.661 1366.26 146.472 1366.26 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M52.4675 1060.12 L82.1433 1060.12 L82.1433 1064.05 L52.4675 1064.05 L52.4675 1060.12 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M102.236 1045.47 Q98.6247 1045.47 96.796 1049.03 Q94.9904 1052.57 94.9904 1059.7 Q94.9904 1066.81 96.796 1070.37 Q98.6247 1073.92 102.236 1073.92 Q105.87 1073.92 107.676 1070.37 Q109.504 1066.81 109.504 1059.7 Q109.504 1052.57 107.676 1049.03 Q105.87 1045.47 102.236 1045.47 M102.236 1041.76 Q108.046 1041.76 111.101 1046.37 Q114.18 1050.95 114.18 1059.7 Q114.18 1068.43 111.101 1073.04 Q108.046 1077.62 102.236 1077.62 Q96.4256 1077.62 93.3469 1073.04 Q90.2914 1068.43 90.2914 1059.7 Q90.2914 1050.95 93.3469 1046.37 Q96.4256 1041.76 102.236 1041.76 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M122.398 1071.07 L127.282 1071.07 L127.282 1076.95 L122.398 1076.95 L122.398 1071.07 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M137.513 1042.39 L155.87 1042.39 L155.87 1046.32 L141.796 1046.32 L141.796 1054.79 Q142.814 1054.45 143.833 1054.29 Q144.851 1054.1 145.87 1054.1 Q151.657 1054.1 155.036 1057.27 Q158.416 1060.44 158.416 1065.86 Q158.416 1071.44 154.944 1074.54 Q151.472 1077.62 145.152 1077.62 Q142.976 1077.62 140.708 1077.25 Q138.462 1076.88 136.055 1076.14 L136.055 1071.44 Q138.138 1072.57 140.361 1073.13 Q142.583 1073.68 145.06 1073.68 Q149.064 1073.68 151.402 1071.58 Q153.74 1069.47 153.74 1065.86 Q153.74 1062.25 151.402 1060.14 Q149.064 1058.04 145.06 1058.04 Q143.185 1058.04 141.31 1058.45 Q139.458 1058.87 137.513 1059.75 L137.513 1042.39 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M101.24 720.965 Q97.6293 720.965 95.8006 724.529 Q93.995 728.071 93.995 735.201 Q93.995 742.307 95.8006 745.872 Q97.6293 749.414 101.24 749.414 Q104.875 749.414 106.68 745.872 Q108.509 742.307 108.509 735.201 Q108.509 728.071 106.68 724.529 Q104.875 720.965 101.24 720.965 M101.24 717.261 Q107.051 717.261 110.106 721.867 Q113.185 726.451 113.185 735.201 Q113.185 743.928 110.106 748.534 Q107.051 753.117 101.24 753.117 Q95.4302 753.117 92.3515 748.534 Q89.296 743.928 89.296 735.201 Q89.296 726.451 92.3515 721.867 Q95.4302 717.261 101.24 717.261 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M121.402 746.566 L126.287 746.566 L126.287 752.446 L121.402 752.446 L121.402 746.566 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M146.472 720.965 Q142.861 720.965 141.032 724.529 Q139.226 728.071 139.226 735.201 Q139.226 742.307 141.032 745.872 Q142.861 749.414 146.472 749.414 Q150.106 749.414 151.911 745.872 Q153.74 742.307 153.74 735.201 Q153.74 728.071 151.911 724.529 Q150.106 720.965 146.472 720.965 M146.472 717.261 Q152.282 717.261 155.337 721.867 Q158.416 726.451 158.416 735.201 Q158.416 743.928 155.337 748.534 Q152.282 753.117 146.472 753.117 Q140.661 753.117 137.583 748.534 Q134.527 743.928 134.527 735.201 Q134.527 726.451 137.583 721.867 Q140.661 717.261 146.472 717.261 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M102.236 396.463 Q98.6247 396.463 96.796 400.028 Q94.9904 403.57 94.9904 410.699 Q94.9904 417.806 96.796 421.37 Q98.6247 424.912 102.236 424.912 Q105.87 424.912 107.676 421.37 Q109.504 417.806 109.504 410.699 Q109.504 403.57 107.676 400.028 Q105.87 396.463 102.236 396.463 M102.236 392.759 Q108.046 392.759 111.101 397.366 Q114.18 401.949 114.18 410.699 Q114.18 419.426 111.101 424.032 Q108.046 428.616 102.236 428.616 Q96.4256 428.616 93.3469 424.032 Q90.2914 419.426 90.2914 410.699 Q90.2914 401.949 93.3469 397.366 Q96.4256 392.759 102.236 392.759 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M122.398 422.065 L127.282 422.065 L127.282 427.944 L122.398 427.944 L122.398 422.065 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M137.513 393.384 L155.87 393.384 L155.87 397.32 L141.796 397.32 L141.796 405.792 Q142.814 405.445 143.833 405.283 Q144.851 405.097 145.87 405.097 Q151.657 405.097 155.036 408.269 Q158.416 411.44 158.416 416.857 Q158.416 422.435 154.944 425.537 Q151.472 428.616 145.152 428.616 Q142.976 428.616 140.708 428.245 Q138.462 427.875 136.055 427.134 L136.055 422.435 Q138.138 423.569 140.361 424.125 Q142.583 424.681 145.06 424.681 Q149.064 424.681 151.402 422.574 Q153.74 420.468 153.74 416.857 Q153.74 413.245 151.402 411.139 Q149.064 409.032 145.06 409.032 Q143.185 409.032 141.31 409.449 Q139.458 409.866 137.513 410.745 L137.513 393.384 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M92.0506 99.5077 L99.6895 99.5077 L99.6895 73.1421 L91.3793 74.8087 L91.3793 70.5495 L99.6432 68.8829 L104.319 68.8829 L104.319 99.5077 L111.958 99.5077 L111.958 103.443 L92.0506 103.443 L92.0506 99.5077 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M121.402 97.5633 L126.287 97.5633 L126.287 103.443 L121.402 103.443 L121.402 97.5633 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip940)" d="M146.472 71.9615 Q142.861 71.9615 141.032 75.5263 Q139.226 79.068 139.226 86.1976 Q139.226 93.304 141.032 96.8688 Q142.861 100.41 146.472 100.41 Q150.106 100.41 151.911 96.8688 Q153.74 93.304 153.74 86.1976 Q153.74 79.068 151.911 75.5263 Q150.106 71.9615 146.472 71.9615 M146.472 68.2579 Q152.282 68.2579 155.337 72.8643 Q158.416 77.4476 158.416 86.1976 Q158.416 94.9244 155.337 99.5308 Q152.282 104.114 146.472 104.114 Q140.661 104.114 137.583 99.5308 Q134.527 94.9244 134.527 86.1976 Q134.527 77.4476 137.583 72.8643 Q140.661 68.2579 146.472 68.2579 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip942)" d="M1224.87 735.166 L1255.6 694.21 L1286.3 653.418 L1316.94 612.951 L1347.49 572.972 L1377.92 533.639 L1408.19 495.109 L1438.28 457.537 L1468.16 421.071 L1497.79 385.857 L1527.16 352.036 L1556.22 319.742 L1584.95 289.103 L1613.33 260.243 L1641.31 233.277 L1668.88 208.311 L1696.01 185.445 L1722.67 164.77 L1748.83 146.369 L1774.47 130.316 L1799.57 116.673 L1824.08 105.496 L1848.01 96.8291 L1871.31 90.7067 L1893.96 87.1533 L1915.95 86.1831 L1937.25 87.7999 L1957.85 91.9973 L1977.71 98.7585 L1996.81 108.057 L2015.15 119.855 L2032.71 134.105 L2049.45 150.752 L2065.38 169.729 L2080.47 190.959 L2094.7 214.359 L2108.07 239.835 L2120.55 267.285 L2132.15 296.601 L2142.84 327.665 L2152.61 360.353 L2161.46 394.535 L2169.38 430.075 L2176.35 466.832 L2182.38 504.658 L2187.45 543.403 L2191.56 582.912 L2194.71 623.028 L2196.89 663.592 L2198.1 704.44 L2198.35 745.411 L2197.62 786.342 L2195.92 827.068 L2193.26 867.428 L2189.63 907.26 L2185.03 946.407 L2179.48 984.711 L2172.98 1022.02 L2165.54 1058.19 L2157.15 1093.07 L2147.84 1126.52 L2137.61 1158.41 L2126.46 1188.61 L2114.42 1217.01 L2101.49 1243.49 L2087.69 1267.94 L2073.03 1290.26 L2057.52 1310.38 L2041.18 1328.2 L2024.03 1343.66 L2006.08 1356.69 L1987.35 1367.24 L1967.87 1375.27 L1947.64 1380.76 L1926.69 1383.66 L1905.04 1383.99 L1882.72 1381.72 L1859.74 1376.88 L1836.12 1369.49 L1811.9 1359.56 L1787.09 1347.14 L1761.72 1332.29 L1735.82 1315.05 L1709.4 1295.5 L1682.5 1273.72 L1655.15 1249.79 L1627.37 1223.82 L1599.19 1195.89 L1570.63 1166.12 L1541.73 1134.64 L1512.51 1101.57 L1483.01 1067.03 L1453.25 1031.18 L1423.26 994.138 L1393.07 956.068 L1362.72 917.117 L1332.23 877.441 L1301.63 837.198 L1270.95 796.549 L1240.23 755.654 L1209.5 714.678 L1178.78 673.783 L1148.1 633.134 L1117.5 592.89 L1087.01 553.215 L1056.66 514.264 L1026.47 476.194 L996.484 439.156 L966.723 403.298 L937.219 368.764 L908.002 335.689 L879.101 304.208 L850.545 274.444 L822.362 246.517 L794.58 220.537 L767.227 196.609 L740.33 174.828 L713.916 155.281 L688.012 138.045 L662.643 123.189 L637.834 110.773 L613.61 100.846 L589.995 93.4481 L567.014 88.6078 L544.688 86.3448 L523.04 86.6682 L502.092 89.5768 L481.864 95.0588 L462.377 103.093 L443.65 113.646 L425.702 126.677 L408.55 142.133 L392.212 159.954 L376.704 180.067 L362.042 202.394 L348.239 226.844 L335.311 253.32 L323.269 281.717 L312.126 311.922 L301.893 343.814 L292.579 377.266 L284.195 412.144 L276.749 448.311 L270.248 485.62 L264.699 523.925 L260.106 563.072 L256.475 602.904 L253.81 643.264 L252.113 683.99 L251.385 724.921 L251.627 765.892 L252.84 806.74 L255.022 847.304 L258.17 887.42 L262.282 926.929 L267.354 965.674 L273.38 1003.5 L280.355 1040.26 L288.271 1075.8 L297.12 1109.98 L306.895 1142.67 L317.584 1173.73 L329.178 1203.05 L341.665 1230.5 L355.032 1255.97 L369.266 1279.37 L384.353 1300.6 L400.278 1319.58 L417.025 1336.23 L434.577 1350.48 L452.917 1362.28 L472.027 1371.57 L491.887 1378.33 L512.477 1382.53 L533.778 1384.15 L555.768 1383.18 L578.424 1379.63 L601.725 1373.5 L625.647 1364.84 L650.166 1353.66 L675.259 1340.02 L700.899 1323.96 L727.061 1305.56 L753.72 1284.89 L780.848 1262.02 L808.419 1237.06 L836.405 1210.09 L864.778 1181.23 L893.511 1150.59 L922.573 1118.3 L951.937 1084.47 L981.573 1049.26 L1011.45 1012.8 L1041.54 975.223 L1071.82 936.693 L1102.24 897.36 L1132.79 857.381 L1163.43 816.914 L1194.13 776.122 L1224.87 735.166 L1224.87 735.166 L1194.13 735.166 L1163.43 735.166 L1132.79 735.166 L1102.24 735.166 L1071.82 735.166 L1041.54 735.166 L1011.45 735.166 L981.573 735.166 L951.937 735.166 L922.573 735.166 L893.511 735.166 L864.778 735.166 L836.405 735.166 L808.419 735.166 L780.848 735.166 L753.72 735.166 L727.061 735.166 L700.899 735.166 L675.259 735.166 L650.166 735.166 L625.647 735.166 L601.725 735.166 L578.424 735.166 L555.768 735.166 L533.778 735.166 L512.477 735.166 L491.887 735.166 L472.027 735.166 L452.917 735.166 L434.577 735.166 L417.025 735.166 L400.278 735.166 L384.353 735.166 L369.266 735.166 L355.032 735.166 L341.665 735.166 L329.178 735.166 L317.584 735.166 L306.895 735.166 L297.12 735.166 L288.271 735.166 L280.355 735.166 L273.38 735.166 L267.354 735.166 L262.282 735.166 L258.17 735.166 L255.022 735.166 L252.84 735.166 L251.627 735.166 L251.385 735.166 L252.113 735.166 L253.81 735.166 L256.475 735.166 L260.106 735.166 L264.699 735.166 L270.248 735.166 L276.749 735.166 L284.195 735.166 L292.579 735.166 L301.893 735.166 L312.126 735.166 L323.269 735.166 L335.311 735.166 L348.239 735.166 L362.042 735.166 L376.704 735.166 L392.212 735.166 L408.55 735.166 L425.702 735.166 L443.65 735.166 L462.377 735.166 L481.864 735.166 L502.092 735.166 L523.04 735.166 L544.688 735.166 L567.014 735.166 L589.995 735.166 L613.61 735.166 L637.834 735.166 L662.643 735.166 L688.012 735.166 L713.916 735.166 L740.33 735.166 L767.227 735.166 L794.58 735.166 L822.362 735.166 L850.545 735.166 L879.101 735.166 L908.002 735.166 L937.219 735.166 L966.723 735.166 L996.484 735.166 L1026.47 735.166 L1056.66 735.166 L1087.01 735.166 L1117.5 735.166 L1148.1 735.166 L1178.78 735.166 L1209.5 735.166 L1240.23 735.166 L1270.95 735.166 L1301.63 735.166 L1332.23 735.166 L1362.72 735.166 L1393.07 735.166 L1423.26 735.166 L1453.25 735.166 L1483.01 735.166 L1512.51 735.166 L1541.73 735.166 L1570.63 735.166 L1599.19 735.166 L1627.37 735.166 L1655.15 735.166 L1682.5 735.166 L1709.4 735.166 L1735.82 735.166 L1761.72 735.166 L1787.09 735.166 L1811.9 735.166 L1836.12 735.166 L1859.74 735.166 L1882.72 735.166 L1905.04 735.166 L1926.69 735.166 L1947.64 735.166 L1967.87 735.166 L1987.35 735.166 L2006.08 735.166 L2024.03 735.166 L2041.18 735.166 L2057.52 735.166 L2073.03 735.166 L2087.69 735.166 L2101.49 735.166 L2114.42 735.166 L2126.46 735.166 L2137.61 735.166 L2147.84 735.166 L2157.15 735.166 L2165.54 735.166 L2172.98 735.166 L2179.48 735.166 L2185.03 735.166 L2189.63 735.166 L2193.26 735.166 L2195.92 735.166 L2197.62 735.166 L2198.35 735.166 L2198.1 735.166 L2196.89 735.166 L2194.71 735.166 L2191.56 735.166 L2187.45 735.166 L2182.38 735.166 L2176.35 735.166 L2169.38 735.166 L2161.46 735.166 L2152.61 735.166 L2142.84 735.166 L2132.15 735.166 L2120.55 735.166 L2108.07 735.166 L2094.7 735.166 L2080.47 735.166 L2065.38 735.166 L2049.45 735.166 L2032.71 735.166 L2015.15 735.166 L1996.81 735.166 L1977.71 735.166 L1957.85 735.166 L1937.25 735.166 L1915.95 735.166 L1893.96 735.166 L1871.31 735.166 L1848.01 735.166 L1824.08 735.166 L1799.57 735.166 L1774.47 735.166 L1748.83 735.166 L1722.67 735.166 L1696.01 735.166 L1668.88 735.166 L1641.31 735.166 L1613.33 735.166 L1584.95 735.166 L1556.22 735.166 L1527.16 735.166 L1497.79 735.166 L1468.16 735.166 L1438.28 735.166 L1408.19 735.166 L1377.92 735.166 L1347.49 735.166 L1316.94 735.166 L1286.3 735.166 L1255.6 735.166 L1224.87 735.166  Z" fill="#e6e6fa" fill-rule="evenodd" fill-opacity="1"></path>
+<polyline clip-path="url(#clip942)" style="stroke:#009af9; stroke-linecap:round; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="1224.87,735.166 1255.6,694.21 1286.3,653.418 1316.94,612.951 1347.49,572.972 1377.92,533.639 1408.19,495.109 1438.28,457.537 1468.16,421.071 1497.79,385.857 1527.16,352.036 1556.22,319.742 1584.95,289.103 1613.33,260.243 1641.31,233.277 1668.88,208.311 1696.01,185.445 1722.67,164.77 1748.83,146.369 1774.47,130.316 1799.57,116.673 1824.08,105.496 1848.01,96.8291 1871.31,90.7067 1893.96,87.1533 1915.95,86.1831 1937.25,87.7999 1957.85,91.9973 1977.71,98.7585 1996.81,108.057 2015.15,119.855 2032.71,134.105 2049.45,150.752 2065.38,169.729 2080.47,190.959 2094.7,214.359 2108.07,239.835 2120.55,267.285 2132.15,296.601 2142.84,327.665 2152.61,360.353 2161.46,394.535 2169.38,430.075 2176.35,466.832 2182.38,504.658 2187.45,543.403 2191.56,582.912 2194.71,623.028 2196.89,663.592 2198.1,704.44 2198.35,745.411 2197.62,786.342 2195.92,827.068 2193.26,867.428 2189.63,907.26 2185.03,946.407 2179.48,984.711 2172.98,1022.02 2165.54,1058.19 2157.15,1093.07 2147.84,1126.52 2137.61,1158.41 2126.46,1188.61 2114.42,1217.01 2101.49,1243.49 2087.69,1267.94 2073.03,1290.26 2057.52,1310.38 2041.18,1328.2 2024.03,1343.66 2006.08,1356.69 1987.35,1367.24 1967.87,1375.27 1947.64,1380.76 1926.69,1383.66 1905.04,1383.99 1882.72,1381.72 1859.74,1376.88 1836.12,1369.49 1811.9,1359.56 1787.09,1347.14 1761.72,1332.29 1735.82,1315.05 1709.4,1295.5 1682.5,1273.72 1655.15,1249.79 1627.37,1223.82 1599.19,1195.89 1570.63,1166.12 1541.73,1134.64 1512.51,1101.57 1483.01,1067.03 1453.25,1031.18 1423.26,994.138 1393.07,956.068 1362.72,917.117 1332.23,877.441 1301.63,837.198 1270.95,796.549 1240.23,755.654 1209.5,714.678 1178.78,673.783 1148.1,633.134 1117.5,592.89 1087.01,553.215 1056.66,514.264 1026.47,476.194 996.484,439.156 966.723,403.298 937.219,368.764 908.002,335.689 879.101,304.208 850.545,274.444 822.362,246.517 794.58,220.537 767.227,196.609 740.33,174.828 713.916,155.281 688.012,138.045 662.643,123.189 637.834,110.773 613.61,100.846 589.995,93.4481 567.014,88.6078 544.688,86.3448 523.04,86.6682 502.092,89.5768 481.864,95.0588 462.377,103.093 443.65,113.646 425.702,126.677 408.55,142.133 392.212,159.954 376.704,180.067 362.042,202.394 348.239,226.844 335.311,253.32 323.269,281.717 312.126,311.922 301.893,343.814 292.579,377.266 284.195,412.144 276.749,448.311 270.248,485.62 264.699,523.925 260.106,563.072 256.475,602.904 253.81,643.264 252.113,683.99 251.385,724.921 251.627,765.892 252.84,806.74 255.022,847.304 258.17,887.42 262.282,926.929 267.354,965.674 273.38,1003.5 280.355,1040.26 288.271,1075.8 297.12,1109.98 306.895,1142.67 317.584,1173.73 329.178,1203.05 341.665,1230.5 355.032,1255.97 369.266,1279.37 384.353,1300.6 400.278,1319.58 417.025,1336.23 434.577,1350.48 452.917,1362.28 472.027,1371.57 491.887,1378.33 512.477,1382.53 533.778,1384.15 555.768,1383.18 578.424,1379.63 601.725,1373.5 625.647,1364.84 650.166,1353.66 675.259,1340.02 700.899,1323.96 727.061,1305.56 753.72,1284.89 780.848,1262.02 808.419,1237.06 836.405,1210.09 864.778,1181.23 893.511,1150.59 922.573,1118.3 951.937,1084.47 981.573,1049.26 1011.45,1012.8 1041.54,975.223 1071.82,936.693 1102.24,897.36 1132.79,857.381 1163.43,816.914 1194.13,776.122 1224.87,735.166 "></polyline>
+</svg>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-parametric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Parametric Plots
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Quarto ではこのような数式・コードが共存するドキュメントが，極めて簡単に＋凡ゆるフォーマットで作成できる．</p>
+<p>計算統計の研究をしている筆者にとっては何より，数式とコードが自然に共存する PDF を簡単に書けること，そして自学のためのノートがそのまま HTML としてブログの形で公開できることが，大変嬉しかった．</p>
+<p>特に VSCode の拡張機能と組み合わせれば，RStudio のような隙のない統合開発環境が得られる．<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>基本的な仕組みとして，自分で作成するのは <code>.qmd</code>ファイルのみである．</p>
+<p>その後は<code>quarto render</code>コマンドにより，</p>
+<div class="callout callout-style-simple callout-important no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<ul>
+<li>コードブロックは Jupyter によって処理され，</li>
+<li>全体は markdown に変換され，</li>
+<li>Pandoc によって<code>pdf</code>, <code>html</code>, <code>word</code> など好きな形式に最終出力できる．</li>
+</ul>
+</div>
+</div>
+</div>
+<p>拡張機能をオンにした VSCode では<code>Run Cell</code>ボタンもあるので，ノートブック全体を毎度ビルドせずとも，コードブロックごとに実行して結果を見ることもできる．</p>
+<p><code>Ctrl+Enter</code> で１行ごとに実行できる操作感は <code>RStudio</code> と同じである．</p>
+</section>
+<section id="美点" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="美点"><span class="header-section-number">1.2</span> 美点</h3>
+<div class="callout callout-style-simple callout-tip no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<ul>
+<li>レンダリングがとんでもなく速い．体感で TeX の10分の1である．</li>
+<li>それでいて数式とコードブロックを併在させることが出来る．なお，明かに TeX を意識していることがわかる使用感になっているし，<a href="https://quarto.org/docs/books/">本の作成も可能</a>としている．</li>
+<li>（ちょっと使いにくい）ブラウザ上ではなく，好きなエディタで動く．Jupyter Notebook が続かない筆者にとって，この点は肝要である．</li>
+<li>私用の勉強ノートとしても使えると同時に，内容そのままブログとして公開できる．</li>
+<li><a href="https://quarto.org/docs/presentations/">プレゼンテーションの作成にも使える</a>．</li>
+<li>すごい細かいが，例えば <code>project type</code> を <code>website</code> としたリポジトリで<code>quarto render</code>をしても，不要なファイルが自動で削除される．このような点がライトユーザーでもとにかく使いやすい．</li>
+<li>さらに<a href="https://quarto.org/docs/interactive/">インタラクティブな機能</a>を実現したブログを作ってみたい．</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="yaml-header" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="yaml-header"><span class="header-section-number">1.3</span> YAML Header</h3>
+<p>各ファイルの冒頭に YAML block を用意することで，ノートブックの詳細を調整できる（参照：<a href="https://quarto.org/docs/reference/formats/html.html">HTML Options</a>）．</p>
+<p>例えば本ページでは次のとおり：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Quarto はじめて良かった"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"司馬博文"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"11/4/2023"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">date-modified</span><span class="kw">:</span><span class="at"> </span><span class="st">"7/7/2024"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">Lifestyle</span><span class="kw">]</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abstract</span><span class="kw">:</span><span class="at"> Quarto は TeX のような使用感で，数式とコードが併存する文章を書き，１つのソースファイルから PDF, HTML, Word, Reveal.js, PowerPoint などの多様な形式に出力できる次世代の執筆環境である．TeX, RStudio, Jupyter Notebook のいずれかに慣れている人であれば，極めて手軽に Quarto を使うことができる．</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abstract-title</span><span class="kw">:</span><span class="at"> 概要</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">mainfont</span><span class="kw">:</span><span class="at"> </span><span class="st">"Gill Sans"</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> minty</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> assets/styles.css</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">highlight-style</span><span class="kw">:</span><span class="at"> ayu</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code-block-border-left</span><span class="kw">:</span><span class="at"> </span><span class="st">"#7CC4AC"</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code-overflow</span><span class="kw">:</span><span class="at"> scroll</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc-title</span><span class="kw">:</span><span class="at"> </span><span class="st">"目次"</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">abstract-title</span><span class="kw">:</span><span class="at"> </span><span class="st">"概要"</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="本文の書き方" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="本文の書き方"><span class="header-section-number">1.4</span> 本文の書き方</h3>
+<section id="数式" class="level4" data-number="1.4.1">
+<h4 data-number="1.4.1" class="anchored" data-anchor-id="数式"><span class="header-section-number">1.4.1</span> 数式</h4>
+<p>本文は markdown 記法で書く．数式も使える：</p>
+<p><span class="math display">\[
+\operatorname{P}[\lvert\xi\rvert&lt;t]\le2e^{-\frac{t^2}{2\sigma^2}},\qquad t&gt;0.
+\]</span></p>
+</section>
+<section id="コード" class="level4" data-number="1.4.2">
+<h4 data-number="1.4.2" class="anchored" data-anchor-id="コード"><span class="header-section-number">1.4.2</span> コード</h4>
+<p>また，コードブロックにもコメントアウトと接頭辞の組み合わせ <code>#|</code> を前につけることでYAMLで指示が出せる（参照：<a href="https://quarto.org/docs/reference/cells/cells-jupyter.html">指示のリスト</a>）．上のコードブロックには</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-polar</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "A line plot on a polar axis"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>と追加されているために，出力された図にラベリングとキャプションが付いているのである．</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip3</span> install jupyter-cache</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>が必要であることに注意．</p>
+</section>
+</section>
+<section id="カーネルの選択" class="level3" data-number="1.5">
+<h3 data-number="1.5" class="anchored" data-anchor-id="カーネルの選択"><span class="header-section-number">1.5</span> カーネルの選択</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> python3 <span class="ex">-m</span> venv GenAI</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> source <span class="ex">GenAI/bin/activate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>により仮想環境を作成して入れるが，この環境を Jupyter notebook で使うにはもう一手間必要である．</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pip <span class="fu">install</span> ipykernel</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> python <span class="ex">-m</span> ipykernel install <span class="at">--user</span> <span class="at">--name</span><span class="op">=</span>GenAI</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>すると</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> kernelspec list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>により見つかるようになっている．YAML header で <code>jupyter: genai</code> と指定すれば良い．</p>
+</section>
+</section>
+<section id="website-の作り方" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="website-の作り方"><span class="header-section-number">2</span> Website の作り方</h2>
+<p><a href="https://quarto.org/docs/publishing/github-pages.html">公式 Guide</a> を参考．</p>
+<section id="source-branchをmainと別ける" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="source-branchをmainと別ける"><span class="header-section-number">2.1</span> Source Branchを<code>main</code>と別ける</h3>
+<p>まず<code>gh-pages</code>という全く新しいブランチを作成する．既存のリポジトリのコミット履歴とは独立している新しいブランチを作るときは<code>--orphan</code>オプションが利用される．</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb8" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">--orphan</span> gh-pages</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span> <span class="co"># make sure all changes are committed before running this!</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--allow-empty</span> <span class="at">-m</span> <span class="st">"Initialising gh-pages branch"</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin gh-pages</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>基本<code>gh-pages</code>ブランチには自分では立ち入らない．</p>
+</section>
+<section id="publishコマンドによるサイトの公開" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="publishコマンドによるサイトの公開"><span class="header-section-number">2.2</span> <code>Publish</code>コマンドによるサイトの公開</h3>
+<p><code>main</code>ブランチにいることを確認して，</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb9" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>を実行．</p>
+<p>GitHubの方の設定<strong>Settings: Pages</strong>で，Sourceを<code>gh-pages</code>ブランチの<code>/(root)</code>にしていることを確認すれば，これで無事サイトが公開されていることが確認できる．</p>
+</section>
+<section id="github-action-の使用" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="github-action-の使用"><span class="header-section-number">2.3</span> GitHub Action の使用</h3>
+<p>さらに，ローカル上で<code>render</code>するのではなく，コミットする度にGitHub上でレンダリングしてもらえるように自動化することもできる．こうするとスマホからも自分のサイトが更新できる．</p>
+<p>まず，GitHubの設定の<strong>Actions</strong>セクションの<strong>Workflow permissions</strong>から，読み書きの権限をGitHub Actionに付与する．</p>
+<p>続いて，次の内容のファイルを<code>.github/workflows/publish.yml</code>に書き込む：</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>.github/workflows/publish.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb10" data-filename=".github/workflows/publish.yml"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">workflow_dispatch</span><span class="kw">:</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> main</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Quarto Publish</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">build-deploy</span><span class="kw">:</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">permissions</span><span class="kw">:</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> write</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Check out repository</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Quarto</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> quarto-dev/quarto-actions/setup@v2</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">tinytex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co">  # https://github.com/quarto-dev/quarto-actions/tree/main/setup</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">env</span><span class="kw">:</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">GITHUB_TOKEN</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span><span class="co">  # Setting GH_TOKEN is recommended as installing TinyTeX will query the github API.</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Render and Publish</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> quarto-dev/quarto-actions/publish@v2</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">target</span><span class="kw">:</span><span class="at"> gh-pages</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="co">          # render: false  # https://quarto.org/docs/publishing/github-pages.html#additional-options</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">env</span><span class="kw">:</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">GITHUB_TOKEN</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>途中，<code>tinytex: true</code> とすることで，１つのページを HTML と pdf の両方で閲覧可能になる．本ブログでは，<a href="https://162348.github.io/static/CV/cv.html">CV のページ</a> でこの機能を使っている．</p>
+<p>これで，<code>main</code>ブランチにコミットする度に，GitHub上で<code>render</code>が実行されることとなる．</p>
+</section>
+</section>
+<section id="pdf-の作り方" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="pdf-の作り方"><span class="header-section-number">3</span> PDF の作り方</h2>
+<section id="lualatex-を使う方法" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="lualatex-を使う方法"><span class="header-section-number">3.1</span> LuaLaTeX を使う方法</h3>
+<p>LuaLaTeX を利用することで日本語を含んだ PDF を作成できる．</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>report.qmd</strong></pre>
+</div>
+<pre class="qmd" data-filename="report.qmd"><code>title: "タイトル"
+author: 司馬博文
+date: 2023/12/11
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    urlcolor: minty
+    template-partials: 
+      - ../../../assets/before-title.tex
+    keep-tex: true
+    block-headings: false
+    pdf-engine: lualatex
+    documentclass: ltjsarticle</code></pre>
+</div>
+<section id="lualatex-の注意" class="level4" data-number="3.1.1">
+<h4 data-number="3.1.1" class="anchored" data-anchor-id="lualatex-の注意"><span class="header-section-number">3.1.1</span> LuaLaTeX の注意</h4>
+<div class="sourceCode" id="cb12"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\int</span>_{<span class="fu">\mathbb</span>{R}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>のような記法は，pdfLaTeX ではなぜかコンパイルが通るが，LuaLaTeX （や殆どの pdfLaTeX 以外のエンジン）ではエラーになる．</p>
+</section>
+<section id="lualatex-の欠点" class="level4" data-number="3.1.2">
+<h4 data-number="3.1.2" class="anchored" data-anchor-id="lualatex-の欠点"><span class="header-section-number">3.1.2</span> LuaLaTeX の欠点</h4>
+<p><code>ltjsarticle</code> クラスでは</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Font</span> <span class="dt">\J</span>Y3/mc/m/n/10=file:HaranoAjiMincho-Regular.otf:-kern<span class="kw">;</span><span class="va">jfm</span><span class="op">=</span>ujis <span class="ex">at</span> 9.24713pt not loadable: metric data not found or bad.</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>to <span class="ex">be</span> read again<span class="op">&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">relax</span> </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="ex">l.79</span> <span class="dt">\k</span>anjiencoding{JY3}<span class="dt">\s</span>electfont</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>                                 <span class="ex">\adjustbaseline</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>というエラーが．一方で，<code>bxjsarticle</code> クラスでは</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">LaTeX</span> Error: File <span class="kw">`</span><span class="ex">haranoaji.sty</span><span class="st">' not found.</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="st">Type X to quit or &lt;RETURN&gt; to proceed,</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="st">or enter new name. (Default extension: sty)</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="st">Enter file name: </span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="st">! Emergency stop.</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;read *&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>というエラーが出る．</p>
+<p>ローカルではインストールすれば良いだけであるが，これを GitHub Actions 上で実現する方法を考えあぐねていた．</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled" title="注（TeX Live のアップデート方法）">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+注（TeX Live のアップデート方法）
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>年度を跨いだ TeX Live manager のアップデートは，次のようにする必要がある：</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> http://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x update-tlmgr-latest.sh</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ./update-tlmgr-latest.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="lualatex-と日本語フォント" class="level4" data-number="3.1.3">
+<h4 data-number="3.1.3" class="anchored" data-anchor-id="lualatex-と日本語フォント"><span class="header-section-number">3.1.3</span> LuaLaTeX と日本語フォント</h4>
+<p>なぜか</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[haranoaji,nfssonly]{<span class="ex">luatexja-preset</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>で変わるのは英語文字だけである．</p>
+</section>
+<section id="github-actions-の修正" class="level4" data-number="3.1.4">
+<h4 data-number="3.1.4" class="anchored" data-anchor-id="github-actions-の修正"><span class="header-section-number">3.1.4</span> <code>GitHub Actions</code> の修正</h4>
+<p>次のようにして，Set up Quarto と Render and Publish の間に，TinyTeX と haranoaji.sty のインストールを使いすることで，GitHub 上でもレンダリングが可能になる．</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>publish.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb17" data-filename="publish.yml"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">'Install TinyTeX'</span><span class="co">  # https://github.com/quarto-dev/quarto-actions/tree/main/setup</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">env</span><span class="kw">:</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">QUARTO_PRINT_STACK</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">GITHUB_TOKEN</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span><span class="co">  # Setting GH_TOKEN is recommended as installing TinyTeX will query the github API.</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">  run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    quarto install tool tinytex --log-level warning</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    case $RUNNER_OS in </span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>      "Linux")</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>          echo "$HOME/bin" &gt;&gt; $GITHUB_PATH</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>          export PATH="$HOME/bin:$PATH"</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>          ;;</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>       "macOS")</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>          TLMGR_PATH=$(dirname $(find ~/Library/TinyTeX -name tlmgr))</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>          echo $TLMGR_PATH &gt;&gt; $GITHUB_PATH</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>          export PATH="$TLMGR_PATH:$PATH"</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>          ;;</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>       "Windows")</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>          TLMGR_PATH=$(dirname $(find $APPDATA/TinyTeX -name tlmgr.bat))</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>          echo $TLMGR_PATH &gt;&gt; $GITHUB_PATH</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>          export PATH="$TLMGR_PATH:$PATH"</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>          ;;</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>        *)</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>          echo "$RUNNER_OS not supported"</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>          exit 1</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>          ;;</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>    esac</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>    echo "TinyTeX installed !"</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>    tlmgr install haranoaji   # Install haranoaji.sty</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">shell</span><span class="kw">:</span><span class="at"> bash</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="ローカルの-tinytex-に-haranoaji.sty-をインストールする方法" class="level4" data-number="3.1.5">
+<h4 data-number="3.1.5" class="anchored" data-anchor-id="ローカルの-tinytex-に-haranoaji.sty-をインストールする方法"><span class="header-section-number">3.1.5</span> ローカルの TinyTeX に haranoaji.sty をインストールする方法</h4>
+<div class="sourceCode" id="cb18"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tlmgr</span> install haranoaji</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>だと，すでに TeX Live がローカルに存在する場合は，そちらにインストールされてしまう．</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install tinytex</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>でインストールされる TinyTeX は，ホームディレクトリ下の <code>~/Liberary/TinyTeX/</code> の <code>bin</code> 内にインストールされる．<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>そこの，<code>tlmgr</code> がインストールされている場所まで行って，</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tlmgr</span> install haranoaji</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>を実行すると良い．</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">❯</span> ./tlmgr install haranoaji        </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="ex">tlmgr:</span> package repository https://mirror.las.iastate.edu/tex-archive/systems/texlive/tlnet/ <span class="op">(verified)</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="ex">[1/1,</span> <span class="pp">??</span>:<span class="pp">??</span>/<span class="pp">??</span>:<span class="pp">??</span>] install: haranoaji <span class="pp">[</span><span class="st">25570k</span><span class="pp">]</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="ex">running</span> mktexlsr ...</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span> <span class="ex">running</span> mktexlsr.</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="ex">tlmgr:</span> package log updated: ~/Library/TinyTeX/texmf-var/web2c/tlmgr.log</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="ex">tlmgr:</span> command log updated: ~/Library/TinyTeX/texmf-var/web2c/tlmgr-commands.log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="typst-を用いる方法" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="typst-を用いる方法"><span class="header-section-number">3.2</span> Typst を用いる方法</h3>
+<p><a href="https://typst.app/">HP</a></p>
+<p>使うフォントは次のように，<a href="https://fonts.google.com/specimen/BIZ+UDPGothic">Google Fonts</a> を通じて，GitHub Actions 上でインストールすることもできるだろう：</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/google/fonts/raw/main/ofl/bizudpgothic/BIZUDPGothic-Regular.ttf</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/google/fonts/raw/main/ofl/bizudpgothic/BIZUDPGothic-Bold.ttf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>typst の pdf は数式の処理がまだ納得のいく設定が見つかっていないが，コードの扱いが非常に自然で，出来上がりも美しい．</p>
+<p>ただし，事前に GitHub Actions の環境上に対応する日本語フォントを用意しておく必要がある．</p>
+<p><code>{yml filename="publish.yml"} - name: Install Japanese Fonts   env:     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Setting GH_TOKEN is recommended as installing TinyTeX will query the github API.   run: |     git clone https://github.com/yuru7/udev-gothic.git     cd udev-gothic     sudo cp -r ./source /usr/share/fonts/truetype/udev-gothic     sudo fc-cache -f -v</code></p>
+</section>
+</section>
+<section id="スライドの作り方" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="スライドの作り方"><span class="header-section-number">4</span> スライドの作り方</h2>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>特に，VSCode では<a href="https://quarto.org/docs/visual-editor/vscode/">ビジュアルモードでの編集</a>もサポートされており，Jupyter Notebookと全く同じ使用感で始められる．<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>MaxOS では．<code>quarto --paths</code> で確認可能．<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/162348\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+      for (let i=0; i<annoteTargets.length; i++) {
+        const annoteTarget = annoteTargets[i];
+        const targetCell = annoteTarget.getAttribute("data-target-cell");
+        const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+        const contentFn = () => {
+          const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          if (content) {
+            const tipContent = content.cloneNode(true);
+            tipContent.classList.add("code-annotation-tip-content");
+            return tipContent.outerHTML;
+          }
+        }
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          onShow: (instance) => {
+            selectCodeLines(instance.reference);
+            instance.reference.classList.add('code-annotation-active');
+            window.tippy.hideAll();
+          },
+          onHide: (instance) => {
+            unselectCodeLines();
+            instance.reference.classList.remove('code-annotation-active');
+          },
+          maxWidth: 300,
+          delay: [50, 0],
+          duration: [200, 0],
+          offset: [5, 10],
+          arrow: true,
+          trigger: 'click',
+          appendTo: function(el) {
+            return el.parentElement.parentElement.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto',
+          placement: 'right',
+          positionFixed: true,
+          popperOptions: {
+            modifiers: [
+            {
+              name: 'flip',
+              options: {
+                flipVariations: false, // true by default
+                allowedAutoPlacements: ['right'],
+                fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+              },
+            },
+            {
+              name: 'preventOverflow',
+              options: {
+                mainAxis: false,
+                altAxis: false
+              }
+            }
+            ]        
+          }      
+        };
+        window.tippy(annoteTarget, config); 
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

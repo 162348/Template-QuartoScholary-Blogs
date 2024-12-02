@@ -1,0 +1,157 @@
+---
+title: "Measurability of the Minkowski Sum of Two Sets"
+author: "Hirofumi Shiba"
+date: "1/5/2024"
+categories: [Functional Analysis]
+toc: true
+number-sections: true
+toc-expand: true
+image: MinkowskiSum.png
+bibliography: ../../../assets/mathematics.bib
+csl: ../../../assets/apalike.csl
+abstract-title: Abstract
+abstract: For two Borel sets $A,B\in\mathcal{B}(\mathbb{R}^n)$, we cannot expect $A+B$ to be always Borel. We give sufficient conditions for the Minkowski sum $A+B$ to be Borel, and also give a concrete counterexample for the case $n\ge3$.
+---
+
+This entry has grown out of a question I answered on [MathOverflow](https://mathoverflow.net/questions/372289/an-example-that-the-sum-of-two-borel-sets-which-is-not-a-borel-set-in-n-dimensio/453854#453854). I will try to explain the question and my answer in a more leisurely manner here.
+
+```{=html}
+<a class="embedly-card" href="https://mathoverflow.net/questions/372289/an-example-that-the-sum-of-two-borel-sets-which-is-not-a-borel-set-in-n-dimensio/453854#453854">An example that the sum of two Borel sets which is not a Borel set in n-dimensional Euclidean space</a><script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+```
+
+{{< include ../../../assets/_preamble.qmd >}}
+
+## Introduction
+
+::: {.callout-tip icon="false" title="Question"}
+For Borel sets $A,B\in\B(\R^n)$, [Minkowski sum](https://en.wikipedia.org/wiki/Minkowski_addition) is defined as
+$$
+A+B:=\Brace{a+b\in\R^n\mid a\in A,b\in B}.
+$$
+We are interested in the following questions:
+
+1. Under what conditions is $A+B$ Borel?
+
+2. For what $A,B\in\B(\R^n)$ is $A+B$ not Borel?
+:::
+
+$A+B$ being an image of a continuous mapping $+:\R^n\times\R^n\to\R^n$, $A+B$ is an analytic (a.k.a. Souslin) set. Therefore, $A+B$ is Lebesgue measurable, given all Souslin sets are universally measurable.^[[@Dudley2002 p.497] Theorem 13.2.6, [@Kechris1995 p.155] Theorem 21.20.]
+
+A statistician or probability theorist may come across this problem when considering [isoperimetric inequalities](https://en.wikipedia.org/wiki/Isoperimetric_inequality). For example, the one by [@Borell75-BrunnMinkowskiInGaussSpace] and [@Sudakov-Tsirelson74] goes as follows:
+
+::: {.callout-tip icon="false"}
+## Theorem^[[@Borell75-BrunnMinkowskiInGaussSpace], [@Sudakov-Tsirelson74], [@Gine-Nickl2021 p.31] Theorem 2.2.3.] (Gaussian isoperimetric inequality)
+Let $\gamma_n:=\rN_n(0,I_n)$ be the standard Gaussian measure on $\R^n$, $u\in\partial B^n\subset\R^n$ a unit vector, $A\in\B(\R^n)$ be a Borel measurable set, and
+$$
+H_a:=\Brace{x\in\R^n\mid(x|u)\le a},\quad a\in\R,
+$$
+be a affine half-space satisfying $\gamma_n(H_a)=\gamma_n(A)$. Then, the following inequality holds for all $\ep>0$:
+$$
+\gamma_n(H_{a+\ep})=\gamma_n(A_\ep),\qquad\ep>0,
+$$
+where $B^n\csub\R^n$ is a closed unit ball centered at the origin, and
+$$
+A_\ep:=\Brace{x\in\R^n\:\middle|\:\inf_{y\in A}\norm{x-y}_2\le\ep}
+$$
+is the closed $\ep$-neighborhood of $A$.
+:::
+
+Here, 
+$$
+A_\ep=A+\ep B^n
+$$
+so the Borel measurability of $A+B^n(0,\ep)$ matters.
+
+Of course, $A_\ep$ is $\gamma_n$-measurable, meaning that there exist Borel sets $B_1,B_2\in\B(\R^n)$ such that
+$$
+B_1\subset A_\ep\subset B_2,
+$$
+$$
+\mu(B_2\setminus B_1)=0.
+$$
+Thus, the above theorem can be understood as implicitly assuming the Borel probability measure $\gamma_n$ to be completed in the Lebesgue sense.
+
+As it turns out in @sec-construction, the Borel measurability of $A+B^n(0,\ep)$ is not guaranteed, despite the fact $B^n(0,\ep)$ is a closed and compact subset.
+
+## Conditions assuring to be Borel
+
+::: {.callout-tip icon="false" title="Proposition"}
+Let $A,B\in\B(\R^n)$ be Borel sets.
+
+1. If either $A$ or $B$ is open, then $A+B$ is open. 
+2. Even when $A$ and $B$ are closed, $A+B$ may not be closed.
+3. Additionally imposing either $A$ or $B$ to be compact, then $A+B$ is closed.
+
+All of the above statements remain valid when an arbitrary topological vector space is considered in place of $\R^n$.
+:::
+
+::: {.callout-note icon="false" title="Proof" collapse="true"}
+1. Given
+$$
+A+B=\bigcup_{b\in B}(A+b),
+$$
+we see that $A+B$ is open if either $A$ or $B$ is open. Note $\bullet+b:\R^n\to\R^n$ is a homeomorphism, so $A+b$ is open. 
+
+1. Let $n=1$ and
+$$
+A:=\N^+,
+$$
+$$
+B:=\Brace{-n+\frac{1}{n}\in\R\:\middle|\:n=2,3,\cdots}.
+$$
+Both sets $A,B$ are discrete subsets of $\R$, hence closed. However, $A+B$ is not closed. Indeed, $\{1/n\}_{n\ge2}\subset A+B$ but its limit point $0\notin A+B$.
+
+1. Let us assume $A$ to be compact and take an arbitrary sequence $\{a_n+b_n\}\subset A+B$ converging to a limit, denoted $x\in\ov{A+B}$. Compactnes of $A$ implies the existence of a convergent subsequence $\{a_{n_k}\}\subset\{a_n\}$ converging to some $a\in A$. Then, $\{b_{n_k}\}\subset B$ also converges and its limit is $x-a\in B$, which belongs to $B$ because $B$ is closed. Hence, $x=a+(x-a)\in A+B$, giving a sufficient condition for $A+B$ to be closed.
+:::
+
+## Counterexamples
+
+### Using subgroups of $\R$
+
+[@Erdos-Stone69-SumOfTwoBorelSets] gives a counterexample for $n\ge2$. Astonishingly, for the case $n=1$, the counterexample consists of $A$ being a Cantor, hence compact, set and $B$ being a $G_\delta$ set.
+
+### Using a non-Borel Souslin set of $\R^2$. {#sec-construction}
+
+For every uncountable Polish space, there exists a non-Borel Souslin set,^[[@Kechris1995 p.85] Theorem 14.2.] i.e., $\B(X)\subsetneq\Sigma^1_1(X)$, where $\Sigma^1_1(X)$ represents the class of all Souslin sets of $X$.
+
+Taking $X=[-1,1]$, we can construct a non-Borel Souslin set $A_1'\in\Sigma^1_1(X)\setminus\B(X)$, and using this $A_1'$ we are going to construct a counterexample for $n\ge3$.
+
+Here, we are in need of the following characterization of Souslin sets:
+
+::: {.callout-tip icon="false"}
+## Theorem^[[@Bogachev2007 p.24] Theorem 6.7.2, [@Kechris1995 p.86] 14.3.]
+Let $X$ be a Souslin space, a Souslin set which is also Hausdorff, and let $A\subset X$ its subset. The following are equivalent:
+
+1. $A$ is a Souslin set;
+2. $A$ can be represented as $A=\pr_1(F)$, where $F\csub X\times\N^\infty$;
+3. $A$ can be represented as $A=\pr_1(B)$, where $B\subset X\times\R$ is Borel measurable.
+:::
+
+Here we take $X:=[-1,1]$ and $A:=A_1'$, we can find a Borel measurable subset $A'\subset[-1,1]^2$ such that $A_1'=\pr_1(A')$.^[From the theorem, we can find a Borel measurable subset $B\subset[-1,1]\times\R$ such that $A_1'=\pr_1(B)$. Then, we define $A':=B\cap[-1,1]^2$, which is Bore measurable and still has the property $A_1'=\pr_1(A')$.]
+
+The next step is crucial, where we map the Borel subset $A'$ to a cylinder
+$$
+C:=\Brace{(x_1,x_2,x_3)\in\R^3\mid x_2^2+x_3^2=1},
+$$
+using a homeomorphism $\psi:\R^2\to\R^2$ which satisfies
+$$
+\begin{align*}
+    &\psi([-1,1]\times\{0\})\\
+    &\qquad\subset\Brace{(x_1,x_2)\in\R^2\mid x_1^2+x_2^2=1}.
+\end{align*}
+$$
+Such a homeomorphism $\psi$ takes the segment $[-1,1]$ on the $x_1$-axis into the unit circumference $S^1$ in the $(x_1,x_2)$-plane.
+
+Using $\psi$ as a building block, we constract a homeomorphism $\Psi:\R^3\to\R^3$ by
+$$
+\Psi(x_1,x_2,x_3):=(x_1,\psi(x_2,x_3)).
+$$
+Such a homeomorphism $\Psi$ pastes the set $A'$ onto the surface of the cylinder $C$: $A:=\Psi(A')\subset C$. Given that $\Psi$ is a homeomorphism, $A$ is a Borel measurable set.^[For a complete separable metric space $X,Y$, an image of a Borel set via a Borel measurable injection is again Borel measurable. [@Bogachev2007 p.30] Theorem 6.8.6.]
+
+Thus, $A\subset C\subset\R^3$ now satisfies the following properties:
+$$
+\Paren{A+B(0,1)}\cap\Paren{\R\times\{0\}^2}=A_1',
+$$
+where $A_1'\notin\B(X)$ is non-Borel and $B(0,1)\subset\R^3$ is a closed unit ball centered at the origin.^[For other notations, please consult [this post](../../../static/Notations.qmd#sec-Banach-spaces).] This scenario is impossible if $A+B(0,1)$ is Borel measurable, since $\R\times\{0\}^2$ is Borel measurable.
+
+This idea is stimulated from [@Lurio+14], which has an [arXiv version](https://arxiv.org/abs/1211.0430), Example 2.4.

@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.552">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Hirofumi Shiba">
+
+<title>My Website - Measurability of the Minkowski Sum of Two Sets</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../profile.jpg" rel="icon" type="image/jpeg">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "?",
+    "H"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../assets/styles.css">
+<meta property="og:title" content="My Website - Measurability of the Minkowski Sum of Two Sets">
+<meta property="og:description" content="For two Borel sets \(A,B\in\mathcal{B}(\mathbb{R}^n)\), we cannot expect \(A+B\) to be always Borel. We give sufficient conditions for the Minkowski sum \(A+B\) to be Borel, and also give a concrete counterexample for the case \(n\ge3\).">
+<meta property="og:image" content="https://162348.github.io/posts/2025/FunctionalAnalysis/MinkowskiSum.png">
+<meta property="og:site_name" content="My Website">
+<meta property="og:image:height" content="94">
+<meta property="og:image:width" content="540">
+<meta name="twitter:title" content="My Website - Measurability of the Minkowski Sum of Two Sets">
+<meta name="twitter:description" content="For two Borel sets \(A,B\in\mathcal{B}(\mathbb{R}^n)\), we cannot expect \(A+B\) to be always Borel. We give sufficient conditions for the Minkowski sum \(A+B\) to be Borel, and also give a concrete counterexample for the case \(n\ge3\).">
+<meta name="twitter:image" content="https://162348.github.io/posts/2025/FunctionalAnalysis/MinkowskiSum.png">
+<meta name="twitter:image-height" content="94">
+<meta name="twitter:image-width" content="540">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">My Website</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../static/AllCategories.html"> 
+<span class="menu-text">カテゴリ</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/162348/162348.github.io/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">目次</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#conditions-assuring-to-be-borel" id="toc-conditions-assuring-to-be-borel" class="nav-link" data-scroll-target="#conditions-assuring-to-be-borel"><span class="header-section-number">2</span> Conditions assuring to be Borel</a></li>
+  <li><a href="#counterexamples" id="toc-counterexamples" class="nav-link" data-scroll-target="#counterexamples"><span class="header-section-number">3</span> Counterexamples</a>
+  <ul class="collapse">
+  <li><a href="#using-subgroups-of-mathbbr" id="toc-using-subgroups-of-mathbbr" class="nav-link" data-scroll-target="#using-subgroups-of-mathbbr"><span class="header-section-number">3.1</span> Using subgroups of <span class="math inline">\(\mathbb{R}\)</span></a></li>
+  <li><a href="#sec-construction" id="toc-sec-construction" class="nav-link" data-scroll-target="#sec-construction"><span class="header-section-number">3.2</span> Using a non-Borel Souslin set of <span class="math inline">\(\mathbb{R}^2\)</span>.</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Measurability of the Minkowski Sum of Two Sets</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Functional Analysis</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Hirofumi Shiba </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">1/05/2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    For two Borel sets <span class="math inline">\(A,B\in\mathcal{B}(\mathbb{R}^n)\)</span>, we cannot expect <span class="math inline">\(A+B\)</span> to be always Borel. We give sufficient conditions for the Minkowski sum <span class="math inline">\(A+B\)</span> to be Borel, and also give a concrete counterexample for the case <span class="math inline">\(n\ge3\)</span>.
+  </div>
+</div>
+
+
+</header>
+
+
+<p>This entry has grown out of a question I answered on <a href="https://mathoverflow.net/questions/372289/an-example-that-the-sum-of-two-borel-sets-which-is-not-a-borel-set-in-n-dimensio/453854#453854">MathOverflow</a>. I will try to explain the question and my answer in a more leisurely manner here.</p>
+<a class="embedly-card" href="https://mathoverflow.net/questions/372289/an-example-that-the-sum-of-two-borel-sets-which-is-not-a-borel-set-in-n-dimensio/453854#453854">An example that the sum of two Borel sets which is not a Borel set in n-dimensional Euclidean space</a><script async="" src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+<div class="hidden">
+<p>A Blog Entry on Bayesian Computation by an Applied Mathematician</p>
+<p>$$</p>
+<p>$$</p>
+</div>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Question">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For Borel sets <span class="math inline">\(A,B\in\mathcal{B}(\mathbb{R}^n)\)</span>, <a href="https://en.wikipedia.org/wiki/Minkowski_addition">Minkowski sum</a> is defined as <span class="math display">\[
+A+B:=\left\{a+b\in\mathbb{R}^n\mid a\in A,b\in B\right\}.
+\]</span> We are interested in the following questions:</p>
+<ol type="1">
+<li><p>Under what conditions is <span class="math inline">\(A+B\)</span> Borel?</p></li>
+<li><p>For what <span class="math inline">\(A,B\in\mathcal{B}(\mathbb{R}^n)\)</span> is <span class="math inline">\(A+B\)</span> not Borel?</p></li>
+</ol>
+</div>
+</div>
+<p><span class="math inline">\(A+B\)</span> being an image of a continuous mapping <span class="math inline">\(+:\mathbb{R}^n\times\mathbb{R}^n\to\mathbb{R}^n\)</span>, <span class="math inline">\(A+B\)</span> is an analytic (a.k.a. Souslin) set. Therefore, <span class="math inline">\(A+B\)</span> is Lebesgue measurable, given all Souslin sets are universally measurable.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>A statistician or probability theorist may come across this problem when considering <a href="https://en.wikipedia.org/wiki/Isoperimetric_inequality">isoperimetric inequalities</a>. For example, the one by <span class="citation" data-cites="Borell75-BrunnMinkowskiInGaussSpace">(<a href="#ref-Borell75-BrunnMinkowskiInGaussSpace" role="doc-biblioref">Borell, 1975</a>)</span> and <span class="citation" data-cites="Sudakov-Tsirelson74">(<a href="#ref-Sudakov-Tsirelson74" role="doc-biblioref">Sudakov and Tsirel’son, 1974</a>)</span> goes as follows:</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (Gaussian isoperimetric inequality)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let <span class="math inline">\(\gamma_n:=\mathrm{N}_n(0,I_n)\)</span> be the standard Gaussian measure on <span class="math inline">\(\mathbb{R}^n\)</span>, <span class="math inline">\(u\in\partial B^n\subset\mathbb{R}^n\)</span> a unit vector, <span class="math inline">\(A\in\mathcal{B}(\mathbb{R}^n)\)</span> be a Borel measurable set, and <span class="math display">\[
+H_a:=\left\{x\in\mathbb{R}^n\mid(x|u)\le a\right\},\quad a\in\mathbb{R},
+\]</span> be a affine half-space satisfying <span class="math inline">\(\gamma_n(H_a)=\gamma_n(A)\)</span>. Then, the following inequality holds for all <span class="math inline">\(\epsilon&gt;0\)</span>: <span class="math display">\[
+\gamma_n(H_{a+\epsilon})=\gamma_n(A_\epsilon),\qquad\epsilon&gt;0,
+\]</span> where <span class="math inline">\(B^n\overset{\textrm{closed}}{\subset}\mathbb{R}^n\)</span> is a closed unit ball centered at the origin, and <span class="math display">\[
+A_\epsilon:=\left\{x\in\mathbb{R}^n\:\middle|\:\inf_{y\in A}\|x-y\|_2\le\epsilon\right\}
+\]</span> is the closed <span class="math inline">\(\epsilon\)</span>-neighborhood of <span class="math inline">\(A\)</span>.</p>
+</div>
+</div>
+<p>Here, <span class="math display">\[
+A_\epsilon=A+\epsilon B^n
+\]</span> so the Borel measurability of <span class="math inline">\(A+B^n(0,\epsilon)\)</span> matters.</p>
+<p>Of course, <span class="math inline">\(A_\epsilon\)</span> is <span class="math inline">\(\gamma_n\)</span>-measurable, meaning that there exist Borel sets <span class="math inline">\(B_1,B_2\in\mathcal{B}(\mathbb{R}^n)\)</span> such that <span class="math display">\[
+B_1\subset A_\epsilon\subset B_2,
+\]</span> <span class="math display">\[
+\mu(B_2\setminus B_1)=0.
+\]</span> Thus, the above theorem can be understood as implicitly assuming the Borel probability measure <span class="math inline">\(\gamma_n\)</span> to be completed in the Lebesgue sense.</p>
+<p>As it turns out in <a href="#sec-construction" class="quarto-xref">Section&nbsp;3.2</a>, the Borel measurability of <span class="math inline">\(A+B^n(0,\epsilon)\)</span> is not guaranteed, despite the fact <span class="math inline">\(B^n(0,\epsilon)\)</span> is a closed and compact subset.</p>
+</section>
+<section id="conditions-assuring-to-be-borel" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="conditions-assuring-to-be-borel"><span class="header-section-number">2</span> Conditions assuring to be Borel</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Proposition">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Proposition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let <span class="math inline">\(A,B\in\mathcal{B}(\mathbb{R}^n)\)</span> be Borel sets.</p>
+<ol type="1">
+<li>If either <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> is open, then <span class="math inline">\(A+B\)</span> is open.</li>
+<li>Even when <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are closed, <span class="math inline">\(A+B\)</span> may not be closed.</li>
+<li>Additionally imposing either <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> to be compact, then <span class="math inline">\(A+B\)</span> is closed.</li>
+</ol>
+<p>All of the above statements remain valid when an arbitrary topological vector space is considered in place of <span class="math inline">\(\mathbb{R}^n\)</span>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Proof">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Given <span class="math display">\[
+A+B=\bigcup_{b\in B}(A+b),
+\]</span> we see that <span class="math inline">\(A+B\)</span> is open if either <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> is open. Note <span class="math inline">\(\bullet+b:\mathbb{R}^n\to\mathbb{R}^n\)</span> is a homeomorphism, so <span class="math inline">\(A+b\)</span> is open.</p></li>
+<li><p>Let <span class="math inline">\(n=1\)</span> and <span class="math display">\[
+A:=\mathbb{N}^+,
+\]</span> <span class="math display">\[
+B:=\left\{-n+\frac{1}{n}\in\mathbb{R}\:\middle|\:n=2,3,\cdots\right\}.
+\]</span> Both sets <span class="math inline">\(A,B\)</span> are discrete subsets of <span class="math inline">\(\mathbb{R}\)</span>, hence closed. However, <span class="math inline">\(A+B\)</span> is not closed. Indeed, <span class="math inline">\(\{1/n\}_{n\ge2}\subset A+B\)</span> but its limit point <span class="math inline">\(0\notin A+B\)</span>.</p></li>
+<li><p>Let us assume <span class="math inline">\(A\)</span> to be compact and take an arbitrary sequence <span class="math inline">\(\{a_n+b_n\}\subset A+B\)</span> converging to a limit, denoted <span class="math inline">\(x\in\overline{A+B}\)</span>. Compactnes of <span class="math inline">\(A\)</span> implies the existence of a convergent subsequence <span class="math inline">\(\{a_{n_k}\}\subset\{a_n\}\)</span> converging to some <span class="math inline">\(a\in A\)</span>. Then, <span class="math inline">\(\{b_{n_k}\}\subset B\)</span> also converges and its limit is <span class="math inline">\(x-a\in B\)</span>, which belongs to <span class="math inline">\(B\)</span> because <span class="math inline">\(B\)</span> is closed. Hence, <span class="math inline">\(x=a+(x-a)\in A+B\)</span>, giving a sufficient condition for <span class="math inline">\(A+B\)</span> to be closed.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="counterexamples" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="counterexamples"><span class="header-section-number">3</span> Counterexamples</h2>
+<section id="using-subgroups-of-mathbbr" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="using-subgroups-of-mathbbr"><span class="header-section-number">3.1</span> Using subgroups of <span class="math inline">\(\mathbb{R}\)</span></h3>
+<p><span class="citation" data-cites="Erdos-Stone69-SumOfTwoBorelSets">(<a href="#ref-Erdos-Stone69-SumOfTwoBorelSets" role="doc-biblioref">Erdös and Stone, 1969</a>)</span> gives a counterexample for <span class="math inline">\(n\ge2\)</span>. Astonishingly, for the case <span class="math inline">\(n=1\)</span>, the counterexample consists of <span class="math inline">\(A\)</span> being a Cantor, hence compact, set and <span class="math inline">\(B\)</span> being a <span class="math inline">\(G_\delta\)</span> set.</p>
+</section>
+<section id="sec-construction" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="sec-construction"><span class="header-section-number">3.2</span> Using a non-Borel Souslin set of <span class="math inline">\(\mathbb{R}^2\)</span>.</h3>
+<p>For every uncountable Polish space, there exists a non-Borel Souslin set,<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> i.e., <span class="math inline">\(\mathcal{B}(X)\subsetneq\Sigma^1_1(X)\)</span>, where <span class="math inline">\(\Sigma^1_1(X)\)</span> represents the class of all Souslin sets of <span class="math inline">\(X\)</span>.</p>
+<p>Taking <span class="math inline">\(X=[-1,1]\)</span>, we can construct a non-Borel Souslin set <span class="math inline">\(A_1'\in\Sigma^1_1(X)\setminus\mathcal{B}(X)\)</span>, and using this <span class="math inline">\(A_1'\)</span> we are going to construct a counterexample for <span class="math inline">\(n\ge3\)</span>.</p>
+<p>Here, we are in need of the following characterization of Souslin sets:</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let <span class="math inline">\(X\)</span> be a Souslin space, a Souslin set which is also Hausdorff, and let <span class="math inline">\(A\subset X\)</span> its subset. The following are equivalent:</p>
+<ol type="1">
+<li><span class="math inline">\(A\)</span> is a Souslin set;</li>
+<li><span class="math inline">\(A\)</span> can be represented as <span class="math inline">\(A=\mathrm{pr}_1(F)\)</span>, where <span class="math inline">\(F\overset{\textrm{closed}}{\subset}X\times\mathbb{N}^\infty\)</span>;</li>
+<li><span class="math inline">\(A\)</span> can be represented as <span class="math inline">\(A=\mathrm{pr}_1(B)\)</span>, where <span class="math inline">\(B\subset X\times\mathbb{R}\)</span> is Borel measurable.</li>
+</ol>
+</div>
+</div>
+<p>Here we take <span class="math inline">\(X:=[-1,1]\)</span> and <span class="math inline">\(A:=A_1'\)</span>, we can find a Borel measurable subset <span class="math inline">\(A'\subset[-1,1]^2\)</span> such that <span class="math inline">\(A_1'=\mathrm{pr}_1(A')\)</span>.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<p>The next step is crucial, where we map the Borel subset <span class="math inline">\(A'\)</span> to a cylinder <span class="math display">\[
+C:=\left\{(x_1,x_2,x_3)\in\mathbb{R}^3\mid x_2^2+x_3^2=1\right\},
+\]</span> using a homeomorphism <span class="math inline">\(\psi:\mathbb{R}^2\to\mathbb{R}^2\)</span> which satisfies <span class="math display">\[
+\begin{align*}
+    &amp;\psi([-1,1]\times\{0\})\\
+    &amp;\qquad\subset\left\{(x_1,x_2)\in\mathbb{R}^2\mid x_1^2+x_2^2=1\right\}.
+\end{align*}
+\]</span> Such a homeomorphism <span class="math inline">\(\psi\)</span> takes the segment <span class="math inline">\([-1,1]\)</span> on the <span class="math inline">\(x_1\)</span>-axis into the unit circumference <span class="math inline">\(S^1\)</span> in the <span class="math inline">\((x_1,x_2)\)</span>-plane.</p>
+<p>Using <span class="math inline">\(\psi\)</span> as a building block, we constract a homeomorphism <span class="math inline">\(\Psi:\mathbb{R}^3\to\mathbb{R}^3\)</span> by <span class="math display">\[
+\Psi(x_1,x_2,x_3):=(x_1,\psi(x_2,x_3)).
+\]</span> Such a homeomorphism <span class="math inline">\(\Psi\)</span> pastes the set <span class="math inline">\(A'\)</span> onto the surface of the cylinder <span class="math inline">\(C\)</span>: <span class="math inline">\(A:=\Psi(A')\subset C\)</span>. Given that <span class="math inline">\(\Psi\)</span> is a homeomorphism, <span class="math inline">\(A\)</span> is a Borel measurable set.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>Thus, <span class="math inline">\(A\subset C\subset\mathbb{R}^3\)</span> now satisfies the following properties: <span class="math display">\[
+\biggr(A+B(0,1)\biggl)\cap\biggr(\mathbb{R}\times\{0\}^2\biggl)=A_1',
+\]</span> where <span class="math inline">\(A_1'\notin\mathcal{B}(X)\)</span> is non-Borel and <span class="math inline">\(B(0,1)\subset\mathbb{R}^3\)</span> is a closed unit ball centered at the origin.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> This scenario is impossible if <span class="math inline">\(A+B(0,1)\)</span> is Borel measurable, since <span class="math inline">\(\mathbb{R}\times\{0\}^2\)</span> is Borel measurable.</p>
+<p>This idea is stimulated from <span class="citation" data-cites="Lurio+14">(<a href="#ref-Lurio+14" role="doc-biblioref">Luiro et al., 2014</a>)</span>, which has an <a href="https://arxiv.org/abs/1211.0430">arXiv version</a>, Example 2.4.</p>
+
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Bogachev2007" class="csl-entry" role="listitem">
+Bogachev, V. I. (2007). <em><a href="https://link.springer.com/book/10.1007/978-3-540-34514-5">Measure theory</a></em>. Springer-Verlag.
+</div>
+<div id="ref-Borell75-BrunnMinkowskiInGaussSpace" class="csl-entry" role="listitem">
+Borell, C. (1975). The brunn-minkowski inequality in gauss space. <em>Inventiones Mathematicae</em>, <em>30</em>, 207–216.
+</div>
+<div id="ref-Dudley2002" class="csl-entry" role="listitem">
+Dudley, R. M. (2002). <em><a href="https://www.cambridge.org/core/books/real-analysis-and-probability/26DDF2D09E526185F2347AA5658B96F6">Real analysis and probability</a></em>,Vol. 74. Cambridge University Press.
+</div>
+<div id="ref-Erdos-Stone69-SumOfTwoBorelSets" class="csl-entry" role="listitem">
+Erdös, P., and Stone, A. H. (1969). <a href="https://www.ams.org/journals/proc/1970-025-02/S0002-9939-1970-0260958-1/S0002-9939-1970-0260958-1.pdf">On the sum of two borel sets</a>. <em>Notices of the American Mathematical Society</em>, <em>16</em>, 968–969.
+</div>
+<div id="ref-Gine-Nickl2021" class="csl-entry" role="listitem">
+Giné, E., and Nickl, R. (2021). <em><a href="https://www.cambridge.org/core/books/mathematical-foundations-of-infinitedimensional-statistical-models/92CAE4193AEA7143CF974296FA8B81E9">Mathematical foundations of infinite-dimensional statistical models</a></em>. Cambridge University Press.
+</div>
+<div id="ref-Kechris1995" class="csl-entry" role="listitem">
+Kechris, A. S. (1995). <em><a href="https://link.springer.com/book/10.1007/978-1-4612-4190-4">Classical descriptive set theory</a></em>,Vol. 156. Springer New York.
+</div>
+<div id="ref-Lurio+14" class="csl-entry" role="listitem">
+Luiro, H., Parviainen, M., and Saksman, E. (2014). <a href="https://projecteuclid.org/journals/differential-and-integral-equations/volume-27/issue-3_2f_4/On-the-existence-and-uniqueness-of-p-harmonious-functions/die/1391091363.short">On the existence and uniqueness of p-harmonious functions</a>. <em>Differential Integral Equations</em>, <em>27</em>(3/4), 201–216.
+</div>
+<div id="ref-Sudakov-Tsirelson74" class="csl-entry" role="listitem">
+Sudakov, V. N., and Tsirel’son, B. S. (1974). Extremal properties of half-spaces for spherically invariant measures. <em>Zapiski Nauchnykh Seminarov Leningradskogo Otdeleniya Matematicheskogo Instituta Im. V. A. Steklova AN SSSR</em>, <em>41</em>, 14–24.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><span class="citation" data-cites="Dudley2002">(<a href="#ref-Dudley2002" role="doc-biblioref">Dudley, 2002, p. 497</a>)</span> Theorem 13.2.6, <span class="citation" data-cites="Kechris1995">(<a href="#ref-Kechris1995" role="doc-biblioref">Kechris, 1995, p. 155</a>)</span> Theorem 21.20.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><span class="citation" data-cites="Borell75-BrunnMinkowskiInGaussSpace">(<a href="#ref-Borell75-BrunnMinkowskiInGaussSpace" role="doc-biblioref">Borell, 1975</a>)</span>, <span class="citation" data-cites="Sudakov-Tsirelson74">(<a href="#ref-Sudakov-Tsirelson74" role="doc-biblioref">Sudakov and Tsirel’son, 1974</a>)</span>, <span class="citation" data-cites="Gine-Nickl2021">(<a href="#ref-Gine-Nickl2021" role="doc-biblioref">Giné and Nickl, 2021, p. 31</a>)</span> Theorem 2.2.3.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><span class="citation" data-cites="Kechris1995">(<a href="#ref-Kechris1995" role="doc-biblioref">Kechris, 1995, p. 85</a>)</span> Theorem 14.2.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><span class="citation" data-cites="Bogachev2007">(<a href="#ref-Bogachev2007" role="doc-biblioref">Bogachev, 2007, p. 24</a>)</span> Theorem 6.7.2, <span class="citation" data-cites="Kechris1995">(<a href="#ref-Kechris1995" role="doc-biblioref">Kechris, 1995, p. 86</a>)</span> 14.3.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>From the theorem, we can find a Borel measurable subset <span class="math inline">\(B\subset[-1,1]\times\mathbb{R}\)</span> such that <span class="math inline">\(A_1'=\mathrm{pr}_1(B)\)</span>. Then, we define <span class="math inline">\(A':=B\cap[-1,1]^2\)</span>, which is Bore measurable and still has the property <span class="math inline">\(A_1'=\mathrm{pr}_1(A')\)</span>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>For a complete separable metric space <span class="math inline">\(X,Y\)</span>, an image of a Borel set via a Borel measurable injection is again Borel measurable. <span class="citation" data-cites="Bogachev2007">(<a href="#ref-Bogachev2007" role="doc-biblioref">Bogachev, 2007, p. 30</a>)</span> Theorem 6.8.6.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>For other notations, please consult <a href="../../../static/Notations.qmd#sec-Banach-spaces">this post</a>.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/162348\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+      for (let i=0; i<annoteTargets.length; i++) {
+        const annoteTarget = annoteTargets[i];
+        const targetCell = annoteTarget.getAttribute("data-target-cell");
+        const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+        const contentFn = () => {
+          const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          if (content) {
+            const tipContent = content.cloneNode(true);
+            tipContent.classList.add("code-annotation-tip-content");
+            return tipContent.outerHTML;
+          }
+        }
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          onShow: (instance) => {
+            selectCodeLines(instance.reference);
+            instance.reference.classList.add('code-annotation-active');
+            window.tippy.hideAll();
+          },
+          onHide: (instance) => {
+            unselectCodeLines();
+            instance.reference.classList.remove('code-annotation-active');
+          },
+          maxWidth: 300,
+          delay: [50, 0],
+          duration: [200, 0],
+          offset: [5, 10],
+          arrow: true,
+          trigger: 'click',
+          appendTo: function(el) {
+            return el.parentElement.parentElement.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto',
+          placement: 'right',
+          positionFixed: true,
+          popperOptions: {
+            modifiers: [
+            {
+              name: 'flip',
+              options: {
+                flipVariations: false, // true by default
+                allowedAutoPlacements: ['right'],
+                fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+              },
+            },
+            {
+              name: 'preventOverflow',
+              options: {
+                mainAxis: false,
+                altAxis: false
+              }
+            }
+            ]        
+          }      
+        };
+        window.tippy(annoteTarget, config); 
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

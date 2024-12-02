@@ -59,7 +59,7 @@ format:
     # theme: 
     # light: minty
     # dark: cyborg
-    css: styles.css
+    css: ./assets/styles.css
     toc: true
     number-sections: true
     highlight-style: ayu
